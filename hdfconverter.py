@@ -11,8 +11,7 @@ for filename in os.listdir(input_dir):
 
         df = pd.read_csv(csv_file)
 
-        df.to_hdf(hdf_file, key='data', mode='w', format='table', data_columns=["Year","Place","Player","Score","Notes"])
-
-        # df = pd.read_hdf(hdf_file, 'data')
-
-        # print(df)
+        if "Trends" in filename:
+            df.to_hdf(hdf_file, key='data', mode='w', format='table', data_columns=["Round_Year","Average","Standard_Deviation"])
+        else:
+            df.to_hdf(hdf_file, key='data', mode='w', format='table', data_columns=["Year","Place","Player","Score","Notes"])
