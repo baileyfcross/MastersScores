@@ -1,7 +1,7 @@
 import pandas as pd
 import os as os
 
-input_dir = 'Data/'
+input_dir = 'Data/November 2'
 output_dir = 'HDF_Output/'
 
 for filename in os.listdir(input_dir):
