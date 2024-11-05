@@ -1,4 +1,6 @@
 import os
+from fileinput import filename
+
 import h5py
 import sys
 import numpy as np
@@ -10,31 +12,49 @@ def display_hdf5_structure(file_path):
             hdf5_file_path = os.path.join(file_path, filename)
             with h5py.File(hdf5_file_path, 'r') as f:
                 print(f"Structure and data of the HDF5 file: {filename}")
-                print_hdf5_group(f, "")
+                print_hdf5_group(f, "", filename)
     except Exception as e:
         print(f"Error reading HDF5 file: {e}")
 
 
-def print_hdf5_group(group, indent):
+def print_hdf5_group(group, indent, filename):
     """
     Recursively prints the structure of a HDF5 group or dataset,
     and displays actual data values for datasets formatted as a table.
     """
-    for key in group:
-        item = group[key]
-        if isinstance(item, h5py.Group):
-            print_hdf5_group(item, indent + "  ")  # Recursively print group contents
-        elif isinstance(item, h5py.Dataset) and key == "table":
-            print(f"{indent}Dataset: {key}, Shape: {item.shape}, Dtype: {item.dtype}")
-            # If dataset is a structured table, display it in table format
-            data = item[()]
-            if isinstance(data, np.ndarray):
-                if data.dtype.names:  # Check if it's a structured array (table format)
-                    print_table_as_table(data, indent)
+    if "Masters" in filename:
+        for key in group:
+            item = group[key]
+            if isinstance(item, h5py.Group):
+                print_hdf5_group(item, indent + "  ", filename)  # Recursively print group contents
+            elif isinstance(item, h5py.Dataset) and key == "table":
+                print(f"{indent}Dataset: {key}, Shape: {item.shape}, Dtype: {item.dtype}")
+                # If dataset is a structured table, display it in table format
+                data = item[()]
+                if isinstance(data, np.ndarray):
+                    if data.dtype.names:  # Check if it's a structured array (table format)
+                        print_table_as_table(data, indent)
+                    else:
+                        print(f"{indent}  Data: {data[:10]}...")  # Display first 10 elements for large datasets
                 else:
-                    print(f"{indent}  Data: {data[:10]}...")  # Display first 10 elements for large datasets
-            else:
-                print(f"{indent}  Data: {data}")
+                    print(f"{indent}  Data: {data}")
+
+    else:
+        for key in group:
+            item = group[key]
+            if isinstance(item, h5py.Group):
+                print_hdf5_group(item, indent + "  ", filename)  # Recursively print group contents
+            elif isinstance(item, h5py.Dataset):
+                print(f"{indent}Dataset: {key}, Shape: {item.shape}, Dtype: {item.dtype}")
+                # If dataset is a structured table, display it in table format
+                data = item[()]
+                if isinstance(data, np.ndarray):
+                    if data.dtype.names:  # Check if it's a structured array (table format)
+                        print_table_as_table(data, indent)
+                    else:
+                        print(f"{indent}  Data: {data[:10]}...")  # Display first 10 elements for large datasets
+                else:
+                    print(f"{indent}  Data: {data}")
 
 
 def print_table_as_table(structured_array, indent):

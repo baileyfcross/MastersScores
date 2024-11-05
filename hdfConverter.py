@@ -1,7 +1,7 @@
 import pandas as pd
 import os as os
 
-input_dir = 'Data/November 2'
+input_dir = 'Data/'
 output_dir = 'HDF_Output/'
 
 for filename in os.listdir(input_dir):
@@ -13,5 +13,7 @@ for filename in os.listdir(input_dir):
 
         if "Trends" in filename:
             df.to_hdf(hdf_file, key='data', mode='w', format='table', data_columns=["Round_Year","Average","Standard_Deviation"])
-        else:
+        elif "Masters" in filename:
             df.to_hdf(hdf_file, key='data', mode='w', format='table', data_columns=["Year","Place","Player","Score","Notes"])
+        else:
+            df.to_hdf(hdf_file, key='data', mode='w')
