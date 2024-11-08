@@ -1,36 +1,41 @@
-<header>
-    <datestamp>2024-11-08</datestamp>
-    <setSpec>Masters Golf Tournament</setSpec>
-</header>
-<metadata>
-<oai_dc:dc
-        xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
-        xmlns:dc="http://purl.org/dc/elements/1.1/"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
-     http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-    <dc:title>Top Five Places in the Masters from 2004 to 2024 (5-Year Intervals)
-    </dc:title>
-    <dc:creator>Masters Golf Tournament</dc:creator>
-    <dc:subject>Masters Golf Tournament--History</dc:subject>
-    <dc:description>A dataset of the top five places in the
-                    Masters golf tournament in 5-year intervals from 2004 - 2024
-    </dc:description>
-    <dc:date>2024-11-05</dc:date>
-    <dc:type>Dataset</dc:type>
-    <dc:identifier>https://github.com/baileyfcross/MastersScores</dc:identifier>
-</oai_dc:dc>
-</metadata>
-<about>
-<provenance
-        xmlns="http://www.openarchives.org/OAI/2.0/provenance"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/provenance
-      http://www.openarchives.org/OAI/2.0/provenance.xsd">
-    <originDescription harvestDate="2024-10-03T12:00:00Z" altered="true">
-        <baseURL>https://www.pgatour.com/tournaments/2024/masters-tournament/R2024014/past-results</baseURL>
+<OAI-PMH xmlns="http://www.openarchives.org/OAI/2.0/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/
+         http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <header>
         <datestamp>2024-11-08</datestamp>
-        <metadataNamespace>http://www.openarchives.org/OAI/2.0/oai_dc/</metadataNamespace>
-    </originDescription>
-</provenance>
-</about>
+        <setSpec>Masters Golf Tournament</setSpec>
+    </header>
+    <metadata>
+        <oai_dc:dc
+                xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+                xmlns:dc="http://purl.org/dc/elements/1.1/"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
+     http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+            <dc:title>Top Five Places in the Masters from 2004 to 2024 (5-Year Intervals)
+            </dc:title>
+            <dc:creator>Masters Golf Tournament</dc:creator>
+            <dc:subject>Masters Golf Tournament--History</dc:subject>
+            <dc:description>A dataset of the top five places in the
+                Masters golf tournament in 5-year intervals from 2004 - 2024
+            </dc:description>
+            <dc:date>2024-11-05</dc:date>
+            <dc:type>Dataset</dc:type>
+            <dc:identifier>https://github.com/baileyfcross/MastersScores</dc:identifier>
+        </oai_dc:dc>
+    </metadata>
+    <about>
+        <provenance
+                xmlns="http://www.openarchives.org/OAI/2.0/provenance"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/provenance
+      http://www.openarchives.org/OAI/2.0/provenance.xsd">
+            <originDescription harvestDate="2024-10-03T12:00:00Z" altered="true">
+                <baseURL>https://www.pgatour.com/tournaments/2024/masters-tournament/R2024014/past-results</baseURL>
+                <datestamp>2024-11-08</datestamp>
+                <metadataNamespace>http://www.openarchives.org/OAI/2.0/oai_dc/</metadataNamespace>
+            </originDescription>
+        </provenance>
+    </about>
+</OAI-PMH>
