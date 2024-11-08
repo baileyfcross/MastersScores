@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:mods="http://www.loc.gov/mods/v3"
+           xmlns:premis="http://www.loc.gov/standards/premis/"
+           xmlns:mix="http://www.loc.gov/mix/v10">
+
+    <!-- METS Header Section -->
+    <mets:metsHdr CREATEDATE="2024-11-08T10:00:00Z" LASTMODDATE="2024-11-08T11:00:00Z" PROFILE="OAI PAI Standard for Dataset">
+        <mets:agent ROLE="CREATOR" TYPE="PERSON">
+            <mets:name>Bailey Cross</mets:name>
+        </mets:agent>
+    </mets:metsHdr>
+
+    <!-- Descriptive Metadata Section -->
+    <mets:dmdSec ID="dmd001">
+        <mets:mdWrap MDTYPE="DC">
+            <mets:xmlData>
+                <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Top Five Places in the Masters from 2004 to 2024
+                    (5-Year Intervals)
+                </dc:title>
+                <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Masters Golf Tournament</dc:creator>
+                <dc:subject xmlns:dc="http://purl.org/dc/elements/1.1/">Masters Golf Tournament--History</dc:subject>
+                <dc:description xmlns:dc="http://purl.org/dc/elements/1.1/">A dataset of the top five places in the
+                    Masters golf tournament in 5-year intervals from 2004 - 2024
+                </dc:description>
+                <dc:publisher xmlns:dc="http://purl.org/dc/elements/1.1/">Masters Golf Tournament</dc:publisher>
+                <dc:date xmlns:dc="http://purl.org/dc/elements/1.1/">2024-11-08</dc:date>
+                <dc:identifier xmlns:dc="http://purl.org/dc/elements/1.1/" type="URL">
+                    https://github.com/baileyfcross/MastersScores
+                </dc:identifier>
+                <dc:rights xmlns:dc="http://purl.org/dc/elements/1.1/">Copyright Not Evaluated</dc:rights>
+                <dc:format xmlns:dc="http://purl.org/dc/elements/1.1/">CSV</dc:format>
+                <dc:language xmlns:dc="http://purl.org/dc/elements/1.1/">en</dc:language>
+                <dc:contributor xmlns:dc="http://purl.org/dc/elements/1.1/">Masters Golf Tournament</dc:contributor>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+
+    <!-- File Section: Links to Digital Content Files -->
+    <mets:fileSec>
+        <mets:fileGrp>
+            <mets:file ID="file001" MIMETYPE="text/csv" CHECKSUMTYPE="SHA-256"
+                       CHECKSUM="2acaf7c72a94de94e1fabe4c9c90721b44fb9bdd89854b7ea196542b0a81fe47">
+                <mets:FLocat xlink:href="Data/November_2/masters_shots_over_5_years_r1.csv"/>
+            </mets:file>
+            <mets:file ID="file002" MIMETYPE="text/csv" CHECKSUMTYPE="SHA-256"
+                       CHECKSUM="b250d0fc1f63c70be1df1e948bea663f5ba6d4bcb49d1099ac31c30b38cf9bea">
+                <mets:FLocat xlink:href="Data/November_2/masters_shots_over_5_years_r2.csv"/>
+            </mets:file>
+            <mets:file ID="file003" MIMETYPE="text/csv" CHECKSUMTYPE="SHA-256"
+                       CHECKSUM="50cf934377f8efcfa9f432c9e52e32dd59b123162665e8bd409193e17601734b">
+                <mets:FLocat xlink:href="Data/November_2/masters_shots_over_5_years_r3.csv"/>
+            </mets:file>
+            <mets:file ID="file004" MIMETYPE="text/csv" CHECKSUMTYPE="SHA-256"
+                       CHECKSUM="f1305788fab0092b58b3201ccf92b53bdab9baee30177717b7dc920f22e610d4">
+                <mets:FLocat xlink:href="Data/November_2/masters_shots_over_5_years_r4.csv"/>
+            </mets:file>
+            <mets:file ID="file005" MIMETYPE="text/csv" CHECKSUMTYPE="SHA-256"
+                       CHECKSUM="9ec62a3b41619c9465e064dd76ae37466a24eeeb28a4690a8f296b081f772b10">
+                <mets:FLocat xlink:href="Data/November_2/masters_shots_over_5_years_total.csv"/>
+            </mets:file>
+            <mets:file ID="file006" MIMETYPE="text/csv" CHECKSUMTYPE="SHA-256"
+                       CHECKSUM="2e4ae39a315af1a0724591e797d1d5e9ffbb0598f1d7b9261eb0869c0ba9612e">
+                <mets:FLocat xlink:href="Data/November_2/masters_shots_over_5_years_trends.csv"/>
+            </mets:file>
+        </mets:fileGrp>
+    </mets:fileSec>
+
+    <!-- Structural Map: Describes the relationship between the metadata and the files -->
+    <mets:structMap TYPE="logical">
+        <mets:div TYPE="dataset" DMDID="dmd001">
+            <mets:fptr FILEID="file001"/>
+        </mets:div>
+        <mets:div TYPE="dataset" DMDID="dmd001">
+            <mets:fptr FILEID="file002"/>
+        </mets:div>
+        <mets:div TYPE="dataset" DMDID="dmd001">
+            <mets:fptr FILEID="file003"/>
+        </mets:div>
+        <mets:div TYPE="dataset" DMDID="dmd001">
+            <mets:fptr FILEID="file004"/>
+        </mets:div>
+        <mets:div TYPE="dataset" DMDID="dmd001">
+            <mets:fptr FILEID="file005"/>
+        </mets:div>
+        <mets:div TYPE="dataset" DMDID="dmd001">
+            <mets:fptr FILEID="file006"/>
+        </mets:div>
+    </mets:structMap>
+</mets:mets>
