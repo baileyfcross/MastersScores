@@ -14,7 +14,6 @@ The GUI worked immediately, but contained an archaic tree format that display ev
 The terminal was the better way to go because it allowed me to change what the user could see which could let me filter out some of the blank variables.
 
 <br />
-<br />
 
 Taking the Chat-GPT code segment, I quickly modified it to display the filename of what data the user was looking at. 
 After that I was able to filter out the blank variables and only include the given table that I made from the converter before.
