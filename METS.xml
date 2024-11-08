@@ -17,8 +17,7 @@
     <mets:dmdSec ID="dmd001">
         <mets:mdWrap MDTYPE="DC">
             <mets:xmlData>
-                <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Top Five Places in the Masters from 2004 to 2024
-                    (5-Year Intervals)
+                <dc:title xmlns:dc="http://purl.org/dc/elements/1.1/">Top Five Places in the Masters from 2004 to 2024 (5-Year Intervals)
                 </dc:title>
                 <dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Masters Golf Tournament</dc:creator>
                 <dc:subject xmlns:dc="http://purl.org/dc/elements/1.1/">Masters Golf Tournament--History</dc:subject>
