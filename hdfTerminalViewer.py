@@ -1,8 +1,5 @@
 import os
-from fileinput import filename
-
 import h5py
-import sys
 import numpy as np
 
 
