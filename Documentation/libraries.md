@@ -20,6 +20,6 @@ https://docs.h5py.org/en/stable/
 
 ### numpy
 
-Numpy is used in the project as a 
-
+Numpy is used in the project as a check for an array within the given selection object
+Other uses can be found here:
 https://numpy.org/doc/stable/reference/
