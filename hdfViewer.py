@@ -3,6 +3,11 @@ from tkinter import filedialog, messagebox, ttk
 import h5py
 import pandas as pd
 
+'''
+Opens a GUI for the user to select a H5 file to view
+Archaic tree is displayed so I highly recommend the terminal viewer
+'''
+
 class HDF5Viewer(tk.Tk):
     file_path = "/"
     def __init__(self):

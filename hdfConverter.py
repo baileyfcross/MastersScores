@@ -1,6 +1,10 @@
 import pandas as pd
 import os as os
 
+'''
+Converts the given input directory from CSV to HDF5
+'''
+
 input_dir = 'Data/'
 output_dir = 'HDF_Output/'
 

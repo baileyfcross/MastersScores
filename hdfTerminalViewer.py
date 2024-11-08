@@ -1,7 +1,9 @@
 import os
 import h5py
 import numpy as np
-
+'''
+Will let any h5 files in the HDF_Output folder be viewed in the terminal
+'''
 
 def display_hdf5_structure(file_path):
     try:
